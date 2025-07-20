@@ -1,4 +1,4 @@
-# nats\_jetStream 🚀
+# nats\_JetStream 🚀
 
 A sample Node.js project demonstrating how to use **NATS JetStream** with subject wildcards (e.g., `dot.*`), durable consumers.
 
