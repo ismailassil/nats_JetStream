@@ -4,17 +4,6 @@ A sample Node.js project demonstrating how to use **NATS JetStream** with subjec
 
 ---
 
-## 🧩 Features
-
-* Connects to a local NATS server using credentials.
-* Shows how to:
-
-  * Create or retrieve a JetStream consumer with a subject filter (e.g. `dot.*`).
-  * Use **pull-based consumption** with durable consumers.
-  * Perform **core NATS subscriptions** for lightweight, non-durable use cases.
-
----
-
 ## 🛠️ Setup
 
 ### Prerequisites
@@ -24,6 +13,10 @@ A sample Node.js project demonstrating how to use **NATS JetStream** with subjec
 * Valid `NATS_USER` and `NATS_PASSWORD` environment variables
 
 ### Installation
+
+```bash
+docker run -d -p 4222:4222 -p 8222:8222 --name nats -ti nats:alpine3.22 --user ${NATS_USER} --pass ${NATS_PASSWORD} -js
+```
 
 ```bash
 git clone https://github.com/ismailassil/nats_jetStream.git
@@ -38,8 +31,9 @@ npm install
 Edit `.env` or set your environment variables:
 
 ```bash
-export NATS_USER=your_user
-export NATS_PASSWORD=your_pass
+// create .env file
+NATS_USER=your_user
+NATS_PASSWORD=your_pass
 ```
 
 ## ✅ Which Should You Use?
